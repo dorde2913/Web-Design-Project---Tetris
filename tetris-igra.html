@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="jscript.js"></script>
+    
+</head>
+<body>
+    <div class="content-fluid">
+        <div class="row background" >
+            buh
+        </div>
+        <div class="row">
+            <div class="col-sm-4 settings" >
+                <button class = "btn btn-dark rounded-corners-gradient-borders" id = "start">Start Game</button>
+                <div class = "rounded-corners-gradient-borders" id = "username" hidden>
+                    <h5>Username: </h5>
+                    <input type="text" class = "rounded-corners-gradient-borders" id = "usernameinput" >
+                    <button class = "btn btn-dark rounded-corners-gradient-borders" id = "results">Submit</button>
+                </div>
+
+            </div>
+            <div class="col-sm-3 tetris-grid" id = "tetris-grid">
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+                <div class="tetris-row">
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                    <div class="tetris-cell"></div>
+                </div>
+               
+            </div>
+            <div class="cl-sm-5 info">
+                <div id = "score" class = "rounded-corners-gradient-borders">
+                    <span>Score:</span>
+                    <span id = "score-value">0</span>
+                </div>
+                
+                <div class="container1 rounded-corners-gradient-borders">
+                    Next block:
+                    <div class = "next-block">
+                        <img id = "next" src="" alt="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+</body>
+</html>

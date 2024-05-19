@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uputstvo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="skripta2.js"></script>
+</head>
+<body>
+    <div class="content-fluid">
+        <div class="row">
+            <div class="col-sm-12 man" >
+                <div class ="rounded-corners-gradient-borders">
+                    <h2>Tetris</h2>
+                    <p class = "pravila">Pravila igre: 
+                        <br>
+                        Kada započnete igru, po tabli počeće da padaju blokovi
+                        <br>
+                        čiju brzinu pada, rotaciju, kao i horizontalnu poziciju
+                        <br>
+                        možete kontrolisati ovim kontrolama:
+                        <br>
+                        Strelice levo/desno -> pomeranje bloka levo/desno 
+                        <br>
+                        Q-> rotacija levo; E-> rotacija desno; W-> ubrzavanje pada
+                        <br>
+                        <br>
+                        Kada blokovima popunite ceo red, taj red nestaje i redovi iznad 
+                        <br>
+                        padaju na njegovu poziciju. Cilj igre je što duže igrati a 
+                        <br>
+                        da ne dođete u situaciju da novi blok nema mesta da se pojavi.                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 set">
+                <div class="rounded-corners-gradient-borders">
+                    <h2>Podešavanja igre:</h2>
+                    <select name="" id="tezina">
+                        <option value="easy">Lako</option>
+                        <option value="med">Srednje</option>
+                        <option value="hard">Tesko</option>
+                    </select>
+                    <br>
+                    Odabir blokova:
+                    <br>
+                    <img src="./tetris-dodatno/Shape0.png" alt="" class = "clickable-image" selected>
+                    <img src="./tetris-dodatno/Shape1.png" alt="" class = "clickable-image" selected>
+                    <img src="./tetris-dodatno/Shape2.png" alt="" class = "clickable-image" selected>
+                    <img src="./tetris-dodatno/Shape3.png" alt="" class = "clickable-image" selected>
+                    <img src="./tetris-dodatno/Shape4.png" alt="" class = "clickable-image" selected>
+                    <img src="./tetris-dodatno/Shape5.png" alt="" class = "clickable-image" selected>
+                    <img src="./tetris-dodatno/Shape6.png" alt="" class = "clickable-image" selected>
+                    <br>
+                    
+                    <button class = "rounded-corners-gradient-borders" id = "start">Start Game !</button>
+                </div>
+            </div>
+        </div>
+            
+
+</body>
+</html>
